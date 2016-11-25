@@ -1,0 +1,7 @@
+corp_twitter:
+    resource: "@CorpTwitterBundle/Resources/config/routing.yml"
+    prefix:   /
+
+corp_user:
+    resource: "@CorpUserBundle/Resources/config/routing.yml"
+    prefix:   /

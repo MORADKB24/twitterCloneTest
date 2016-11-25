@@ -1,0 +1,6 @@
+.line:nth-child(odd) {
+    background: #e7c3c3;
+}
+.line:nth-child(even) {
+    background: #66afe9;
+}

@@ -1,0 +1,6 @@
+corp_twitter_homepage:
+    path:     /
+    defaults: { _controller: CorpTwitterBundle:Tweet:index }
+corp_twitter_add_page:
+    path:     /tweet/add
+    defaults: { _controller: CorpTwitterBundle:Tweet:add }

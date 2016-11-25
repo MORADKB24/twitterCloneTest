@@ -1,0 +1,5 @@
+#Corp UserBundle Security rules
+imports:
+    - { resource: "@CorpUserBundle/Resources/config/security.yml"}
+
+

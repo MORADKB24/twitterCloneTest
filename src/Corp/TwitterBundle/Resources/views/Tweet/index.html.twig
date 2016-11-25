@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>#TwitterClone</h1>
+        <p>This is our first apps using Symfony to build a Twitter clone </p>
+    <!-- Example row of columns
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <img src="{{ asset('img/grizou.jpg') }}" alt="">
+                <p>Fier d'avoir égalé le record de but en Ligue des Champions de Monsieur Luis Aragonés avec <span style="color: #1b95e0; font-weight: bold;
+    text-decoration: none;">l'@AtletiFR</span></p>
+                <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <img src="{{ asset('img/pesquet.jpg') }}" alt="">
+                <p>Notre Soyouz vu depuis la Cupola. Magnifique, non? Grâce à lui le voyage de 2 jours depuis Baïkonour s’est passé parfaitement. <span style="color: #1b95e0; font-weight: bold;
+    text-decoration: none;">#Proxima</span></p>
+                <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <img src="{{ asset('img/tpmp.jpg') }}" alt="">
+                <p>1.455.000 téléspectateurs (6,1% de pda) devant <span style="color: #1b95e0; font-weight: bold;
+    text-decoration: none;">@TPMP</span> hier soir. 1er talk show de l'access prime time 👍🏼</p>
+                <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+        </div>
+ -->
+
+        <div class="row">
+
+            {% for tweet in tweets %}
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h5>{{ tweet.content }}</h5>
+                            <p><a>@{{ tweet.user }}</a> at {{ tweet.publishedAt|date('Y-m-d H:m') }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock body %}
